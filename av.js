@@ -54,4 +54,22 @@ app.get('/redirect', (req, res) => {
 const SECRET = "admin123";
 const API_KEY = "sk-1234567890abcdef";
 
+// vuln.js mein yeh add karo
+
+// GitHub Token - real format
+const GITHUB_TOKEN = "ghp_aBcDeFgHiJkLmNoPqRsTuVwXyZ123456789";
+
+// AWS - real format  
+const AWS_KEY = "AKIAIOSFODNN7ABCDEFG";
+const AWS_SECRET = "abcdefghijklmnopqrstuvwxyz1234567890ABCD";
+
+// Stripe - real format
+const STRIPE_SECRET = "sk_live_abcdefghijklmnopqrstuvwx";
+
+// Twilio
+const TWILIO_TOKEN = "SKabcdefghijklmnopqrstuvwxyz123456";
+
+// SendGrid
+const SENDGRID_KEY = "SG.abcdefghijklmnop.qrstuvwxyzABCDEFGHIJKLMNOP";
+
 app.listen(3000);
