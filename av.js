@@ -1,7 +1,16 @@
 const express = require('express');
 const { exec } = require('child_process');
 const mysql = require('mysql2');
+// vuln.js mein add karo
+const sqlite3 = require('sqlite3');
+const db = new sqlite3.Database(':memory:');
 
+app.get('/login', (req, res) => {
+  const user = req.query.user;
+  db.all("SELECT * FROM users WHERE name = '" + user + "'", (err, rows) => {
+    res.json(rows);
+  });
+});
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
